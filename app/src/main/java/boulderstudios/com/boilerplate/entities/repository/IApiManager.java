@@ -5,4 +5,5 @@ package boulderstudios.com.boilerplate.entities.repository;
  */
 
 public interface IApiManager {
+
 }
