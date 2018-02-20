@@ -6,6 +6,9 @@ import boulderstudios.com.boilerplate.errors.AppError;
  * Created by yuval on 2/15/18.
  */
 
+/**
+ * Encapsulate a result from a respository
+ */
 public class Result<T> {
 
     private final T mResult;
