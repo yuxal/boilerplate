@@ -16,5 +16,5 @@ public interface IExecutor {
      * Execute a certain interactor/usecase
      * @param interactor
      */
-    void execute(IInteractor interactor);
+    <T> void execute(IInteractor<T> interactor);
 }

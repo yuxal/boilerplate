@@ -1,5 +1,8 @@
 package boulderstudios.com.boilerplate.entities.executor.impl;
 
+import android.os.Handler;
+import android.os.Looper;
+
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
@@ -7,6 +10,7 @@ import java.util.concurrent.TimeUnit;
 
 import boulderstudios.com.boilerplate.entities.executor.IExecutor;
 import boulderstudios.com.boilerplate.entities.interactor.IInteractor;
+import boulderstudios.com.boilerplate.entities.model.Result;
 
 /**
  * Created by yuval on 2/13/18.
@@ -21,6 +25,7 @@ public class BackgroundThreadExecutor implements IExecutor {
     private static final int KEEP_ALIVE_TIME = 120;
     private static final TimeUnit TIME_UNIT = TimeUnit.SECONDS;
     private static final BlockingQueue<Runnable> WORK_QUEUE = new LinkedBlockingQueue<Runnable>();
+    private final Handler mHandler = new Handler(Looper.getMainLooper());
 
     private ThreadPoolExecutor mThreadPoolExecutor;
 
@@ -35,12 +40,18 @@ public class BackgroundThreadExecutor implements IExecutor {
     }
 
     @Override
-    public void execute(final IInteractor interactor) {
+    public <T> void execute(final IInteractor<T> interactor) {
         mThreadPoolExecutor.execute(new Runnable() {
             @Override
             public void run() {
                 // run the main logic
-                interactor.start();
+                final Result<T> result = interactor.start();
+                mHandler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        interactor.finish(result);
+                    }
+                });
             }
         });
     }

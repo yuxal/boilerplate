@@ -1,5 +1,6 @@
 package boulderstudios.com.boilerplate.presentation.presenters;
 
+import boulderstudios.com.boilerplate.entities.executor.IExecutor;
 import boulderstudios.com.boilerplate.presentation.IMvpPresenter;
 import boulderstudios.com.boilerplate.presentation.mvpviewinterfaces.IMainView;
 
@@ -10,8 +11,11 @@ import boulderstudios.com.boilerplate.presentation.mvpviewinterfaces.IMainView;
 public class DefaultMainViewPresenter extends IMvpPresenter<IMainView> implements
         IMainView.PresenterInterface {
 
-    public DefaultMainViewPresenter(IMainView view) {
+    private final IExecutor mExecutor;
+
+    public DefaultMainViewPresenter(IExecutor executor, IMainView view) {
         super(view);
+        mExecutor = executor;
     }
 
     @Override
@@ -21,7 +25,8 @@ public class DefaultMainViewPresenter extends IMvpPresenter<IMainView> implement
 
     @Override
     public void onViewShown() {
-
+        //getView().showProgress();
+        //mExecutor.execute(new SomeInteractor(new InteractorCallback() {...}));
     }
 
     @Override

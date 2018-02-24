@@ -7,5 +7,5 @@ package boulderstudios.com.boilerplate.entities.repository;
 /**
  * Interface to specify the local persistence methods that are available on the model
  */
-public class IModelPersistenceInterface {
+public interface IPersistence {
 }
