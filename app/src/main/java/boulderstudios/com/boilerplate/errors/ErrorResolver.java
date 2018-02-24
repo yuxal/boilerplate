@@ -7,4 +7,6 @@ package boulderstudios.com.boilerplate.errors;
 public abstract class ErrorResolver {
 
     public abstract void handleError(ServerUnavailableError error);
+
+    public abstract void handleError(UserLoggedOutError error);
 }
