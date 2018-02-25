@@ -1,5 +1,10 @@
 apply plugin: 'com.android.application'
 
+
+// add the repositories this project is going to use to depList
+String RETROFIT = "retrofit"
+def depList = []
+
 android {
     compileSdkVersion 26
     defaultConfig {
@@ -16,12 +21,26 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    sourceSets {
+        main {
+            java {
+                if (!depList.contains(RETROFIT)) {
+                    exclude '**/RetrofitApiManager.java'
+                }
+            }
+        }
+    }
 }
 
 ext {
     ext.supportLibVersion = '26.1.0'
 }
+
 dependencies {
+    if (depList.contains(RETROFIT)) {
+        implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+        implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    }
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:' + supportLibVersion
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
