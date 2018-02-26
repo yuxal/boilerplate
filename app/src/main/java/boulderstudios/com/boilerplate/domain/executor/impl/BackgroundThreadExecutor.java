@@ -1,4 +1,4 @@
-package boulderstudios.com.boilerplate.entities.executor.impl;
+package boulderstudios.com.boilerplate.domain.executor.impl;
 
 import android.os.Handler;
 import android.os.Looper;
@@ -8,9 +8,9 @@ import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
-import boulderstudios.com.boilerplate.entities.executor.IExecutor;
-import boulderstudios.com.boilerplate.entities.interactor.IInteractor;
-import boulderstudios.com.boilerplate.entities.model.Result;
+import boulderstudios.com.boilerplate.domain.executor.IExecutor;
+import boulderstudios.com.boilerplate.domain.interactor.IInteractor;
+import boulderstudios.com.boilerplate.data.model.Result;
 
 /**
  * Created by yuval on 2/13/18.

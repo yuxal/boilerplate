@@ -1,10 +1,10 @@
-package boulderstudios.com.boilerplate.entities.model;
-
-import boulderstudios.com.boilerplate.errors.AppError;
+package boulderstudios.com.boilerplate.data.model;
 
 /**
  * Created by yuval on 2/15/18.
  */
+
+import boulderstudios.com.boilerplate.data.errors.AppError;
 
 /**
  * Encapsulate a result from a respository
