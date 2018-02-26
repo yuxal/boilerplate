@@ -1,4 +1,4 @@
-package boulderstudios.com.boilerplate.entities.repository;
+package boulderstudios.com.boilerplate.domain.repository;
 
 /**
  * Created by yuval on 2/24/18.

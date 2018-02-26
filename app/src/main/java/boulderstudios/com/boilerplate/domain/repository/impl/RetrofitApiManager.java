@@ -1,9 +1,9 @@
-package boulderstudios.com.boilerplate.entities.repository.impl;
+package boulderstudios.com.boilerplate.domain.repository.impl;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-import boulderstudios.com.boilerplate.entities.repository.IApiManager;
+import boulderstudios.com.boilerplate.domain.repository.IApiManager;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

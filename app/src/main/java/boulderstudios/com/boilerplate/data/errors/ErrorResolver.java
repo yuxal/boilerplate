@@ -1,4 +1,4 @@
-package boulderstudios.com.boilerplate.errors;
+package boulderstudios.com.boilerplate.data.errors;
 
 /**
  * Created by yuval on 2/18/18.

@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import boulderstudios.com.boilerplate.R;
-import boulderstudios.com.boilerplate.entities.executor.impl.BackgroundThreadExecutor;
+import boulderstudios.com.boilerplate.domain.executor.impl.BackgroundThreadExecutor;
 import boulderstudios.com.boilerplate.presentation.mvpviewinterfaces.IMainView;
 import boulderstudios.com.boilerplate.presentation.presenters.DefaultMainViewPresenter;
 

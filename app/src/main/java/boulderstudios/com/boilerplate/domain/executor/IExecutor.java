@@ -1,6 +1,6 @@
-package boulderstudios.com.boilerplate.entities.executor;
+package boulderstudios.com.boilerplate.domain.executor;
 
-import boulderstudios.com.boilerplate.entities.interactor.IInteractor;
+import boulderstudios.com.boilerplate.domain.interactor.IInteractor;
 
 /**
  * Created by yuval on 4/29/17.

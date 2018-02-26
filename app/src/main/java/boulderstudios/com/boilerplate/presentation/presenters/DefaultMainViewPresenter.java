@@ -1,6 +1,6 @@
 package boulderstudios.com.boilerplate.presentation.presenters;
 
-import boulderstudios.com.boilerplate.entities.executor.IExecutor;
+import boulderstudios.com.boilerplate.domain.executor.IExecutor;
 import boulderstudios.com.boilerplate.presentation.IMvpPresenter;
 import boulderstudios.com.boilerplate.presentation.mvpviewinterfaces.IMainView;
 

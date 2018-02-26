@@ -1,8 +1,8 @@
-package boulderstudios.com.boilerplate.errors.resolvers;
+package boulderstudios.com.boilerplate.data.errors.resolvers;
 
-import boulderstudios.com.boilerplate.errors.ErrorResolver;
-import boulderstudios.com.boilerplate.errors.ServerUnavailableError;
-import boulderstudios.com.boilerplate.errors.UserLoggedOutError;
+import boulderstudios.com.boilerplate.data.errors.ErrorResolver;
+import boulderstudios.com.boilerplate.data.errors.ServerUnavailableError;
+import boulderstudios.com.boilerplate.data.errors.UserLoggedOutError;
 
 /**
  * Created by yuval on 2/24/18.
