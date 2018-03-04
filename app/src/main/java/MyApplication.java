@@ -14,8 +14,13 @@ public class MyApplication extends Application {
         super.onCreate();
         sInstance = this;
         // Initialize app wide components here
+
+        // To use crashlytics, add the fabric id in the manifset and change USE_CRASHLYTICS to
+        // true in build.gradle(root)
+        //Fabric.with(this, new Crashlytics());
     }
 
     public static Context getInstance() {
         return sInstance;
-    }}
+    }
+}

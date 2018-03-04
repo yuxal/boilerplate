@@ -41,6 +41,11 @@ dependencies {
         implementation 'com.squareup.retrofit2:retrofit:2.3.0'
         implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
     }
+    if (USE_CRASHLYTICS) {
+        compile('com.crashlytics.sdk.android:crashlytics:2.9.1@aar') {
+            transitive = true
+        }
+    }
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:' + supportLibVersion
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
