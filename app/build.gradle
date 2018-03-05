@@ -3,6 +3,7 @@ apply plugin: 'com.android.application'
 
 // add the repositories this project is going to use to depList
 String RETROFIT = "retrofit"
+String ORM_LITE = "ormlite"
 def depList = []
 
 android {
@@ -27,6 +28,10 @@ android {
                 if (!depList.contains(RETROFIT)) {
                     exclude '**/RetrofitApiManager.java'
                 }
+                if (!depList.contains(ORM_LITE)) {
+                    exclude '**/DatabaseHelper.java'
+                    exclude '**/OrmlitePersistence.java'
+                }
             }
         }
     }
@@ -40,6 +45,9 @@ dependencies {
     if (depList.contains(RETROFIT)) {
         implementation 'com.squareup.retrofit2:retrofit:2.3.0'
         implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    }
+    if (depList.contains(ORM_LITE)) {
+        implementation 'com.j256.ormlite:ormlite-android:5.0'
     }
     if (USE_CRASHLYTICS) {
         compile('com.crashlytics.sdk.android:crashlytics:2.9.1@aar') {
