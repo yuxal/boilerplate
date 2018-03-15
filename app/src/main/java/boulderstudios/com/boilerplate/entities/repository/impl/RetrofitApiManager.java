@@ -1,4 +1,4 @@
-package boulderstudios.com.boilerplate.domain.repository.impl;
+package boulderstudios.com.boilerplate.entities.repository.impl;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

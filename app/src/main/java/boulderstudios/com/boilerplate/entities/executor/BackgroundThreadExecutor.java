@@ -1,4 +1,4 @@
-package boulderstudios.com.boilerplate.domain.executor.impl;
+package boulderstudios.com.boilerplate.entities.executor;
 
 import android.os.Handler;
 import android.os.Looper;
